@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.mjs",
   "scripts": {
-    "server": "node server.mjs"
+    "server": "node server.mjs",
+    "development": "nodemon server.mjs"
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +15,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.1.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
   }
 }
