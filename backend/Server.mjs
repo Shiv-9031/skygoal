@@ -5,6 +5,7 @@ import {database} from "./config/database.mjs"
 import cors from "cors";
 import authRoutes from "./Routes/AuthRoutes.mjs"
 import blogRoutes from "./Routes/blogRoutes.mjs"
+import path from "path"
 
 
 const app =express();
@@ -23,6 +24,15 @@ app.use(cors())
 //routes
 app.use("/api/v1/auth",authRoutes)
 app.use("/api/v1/blogging",blogRoutes)
+
+//static files
+app.use(express.static(path.join(__dirname,"./frontend/build")));
+app.get("*",function(req,res){
+    res.sendFile(path.join(__dirname,"./frontend/build/index.html"));
+})
+
+
+
 
 
 
