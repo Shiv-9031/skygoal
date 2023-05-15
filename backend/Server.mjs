@@ -12,7 +12,7 @@ import { fileURLToPath} from "url"
 const app =express();
 
 //config env
-config({path:"./config/config.env"})
+config({path:"config.env"})
 
 //database connection
 database();
